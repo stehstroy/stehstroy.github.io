@@ -107,7 +107,7 @@
 	<div class="row">
 	  <div class="col-md-12">
       <h1>Расположение офиса</h1>
-	    <div id="map" class="gmaps margin-bottom-40" style="height:400px;"></div>
+	    <div id="map" class="map margin-bottom-40" style="height:400px;"></div>
 	  </div>
 	  <div class="col-md-6 col-sm-6">
 	    <h1>Как нас найти?</h1>
@@ -202,29 +202,19 @@
 
 
 
-  <script src="http://maps.google.com/maps/api/js?sensor=true.js"></script> 
-  <script src="/metronic/assets/plugins/gmaps/gmaps.js"></script>
-  <script>
-    var map;
-    $(document).ready(function(){
-      map = new GMaps({
-	    div: '#map',
-	    lat: 59.968183,
-	    lng: 30.337809,
-      });
-       var marker = map.addMarker({
-	lat: 59.968183,
-	lng: 30.337809,
-	title: "СпецТехСтрой",
-	infoWindow: {
-	    content: "<b>СпецТехСтрой</b><br>г. Санкт-Петербург Выборгская наб., дом 29, офис 419<br>"
-	}
-    });
 
-       marker.infoWindow.open(map, marker);
-    });
-  </script>
-
+<script charset="utf-8" src="https://floors-widget.api.2gis.ru/loader.js" id="dg-floors-widget-loader">
+    DG.FloorsWidget.init({
+        container: 'map',
+        width: '960px',
+        height: '600px',
+        initData: {
+            complexId: '5348552838528542'
+    }
+});	
+</script>
+	
+		
 
 
 <!-- END PAGE-SPECIFIC PLUGINS --> 
