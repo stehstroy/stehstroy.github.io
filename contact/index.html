@@ -190,8 +190,11 @@
                     center: [59.968064, 30.337991],
                     zoom: 15
                 });
-
-                DG.marker([59.968064,30.337991]).addTo(map).bindPopup('Мы находимся здесь!');
+                myIcon = DG.icon({
+                    iconUrl: 'https://stehstroy.com/favicon.png',
+                    iconSize: [48, 35]
+                })
+                DG.marker([59.968064,30.337991],{icon: myDivIcon}).addTo(map).bindPopup('Мы находимся здесь!');
             });
 </script>
 	
